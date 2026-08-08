@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Collections — AURA Handbags</title>
+  <meta name="description" content="Explore the full collection of luxury handbags, bridal potlis, festive clutches, and structured totes by Aura Handbags Meerut.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Collections Page Specific Styles */
+    .collections-hero {
+      padding: 11rem 4rem 4rem 4rem;
+      background-color: var(--bg-primary);
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .collections-hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .collections-hero-title {
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .collections-hero-title em {
+      font-style: italic;
+      color: var(--accent-gold);
+      font-weight: 300;
+    }
+
+    .collections-hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Filter & Controls Bar */
+    .filter-bar-section {
+      padding: 2rem 4rem;
+      background-color: var(--bg-primary);
+      position: sticky;
+      top: 4.8rem;
+      z-index: 100;
+      border-bottom: 1px solid var(--border-color);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .filter-container {
+      max-width: 1600px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .filter-tags {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-white);
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: var(--text-primary);
+      color: var(--bg-white);
+      border-color: var(--text-primary);
+    }
+
+    .filter-count {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Collections Catalogue Grid */
+    .catalogue-section {
+      padding: 4rem 4rem var(--space-2xl) 4rem;
+      background-color: var(--bg-primary);
+    }
+
+    .catalogue-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .catalogue-item {
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.4s var(--ease-out-expo);
+    }
+
+    .catalogue-item-img-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      border-radius: 3px;
+      background-color: #F3EFEA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .catalogue-item-img-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      transition: transform 1s var(--ease-out-expo);
+    }
+
+    .catalogue-item:hover .catalogue-item-img-wrapper img {
+      transform: scale(1.06);
+    }
+
+    .catalogue-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      padding: 0.4rem 0.9rem;
+      background-color: rgba(248, 245, 241, 0.9);
+      backdrop-filter: blur(4px);
+      color: var(--text-primary);
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .catalogue-item-info {
+      padding-top: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
+    }
+
+    .catalogue-item-cat {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--accent-gold);
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    .catalogue-item-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--text-primary);
+      font-weight: 400;
+    }
+
+    .catalogue-item-price {
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    @media screen and (max-width: 1024px) {
+      .catalogue-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      .collections-hero {
+        padding: 8rem 2rem 3rem 2rem;
+      }
+      .filter-bar-section,
+      .catalogue-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .catalogue-grid {
+        grid-template-columns: 1fr;
+      }
+      .filter-bar-section,
+      .catalogue-section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Transparent / Sticky Navbar -->
+  <header class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-brand">AURA</a>
+    
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="collections.html" class="nav-link active" style="color: var(--accent-gold);">Catalogue</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+      <li><a href="#footer" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="nav-whatsapp-btn whatsapp-trigger" aria-label="Order on WhatsApp">
+        <svg viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m0-18.413C6.442 3.372 1.6 8.213 1.6 14.22c0 2.05.57 4.04 1.646 5.772L1.5 24.283l4.417-1.159c1.67 1.006 3.597 1.537 5.631 1.538h.005c6.01 0 10.852-4.843 10.854-10.852 0-2.898-1.129-5.623-3.18-7.674C17.175 4.085 14.45 2.96 11.601 2.96z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </button>
+
+      <div class="mobile-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Collections Hero -->
+  <section class="collections-hero">
+    <div class="collections-hero-content">
+      <span class="subheading">AURA HANDBAGS &bull; MEERUT</span>
+      <h1 class="collections-hero-title">The Complete <em>Catalogue.</em></h1>
+      <p class="collections-hero-desc">
+        Explore our full range of handcrafted luxury handbags, embellished potlis, evening clutches, and structured totes designed for weddings, festive galas, and everyday elegance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter & Controls Bar -->
+  <section class="filter-bar-section">
+    <div class="filter-container">
+      <div class="filter-tags">
+        <button class="filter-btn active" onclick="filterCatalogue('all', this)">All Creations</button>
+        <button class="filter-btn" onclick="filterCatalogue('wedding', this)">Wedding &amp; Festive</button>
+        <button class="filter-btn" onclick="filterCatalogue('cocktail', this)">Cocktail &amp; Evening</button>
+        <button class="filter-btn" onclick="filterCatalogue('everyday', this)">Everyday Luxury</button>
+        <button class="filter-btn" onclick="filterCatalogue('signature', this)">Signature Series</button>
+      </div>
+
+      <span class="filter-count" id="item-counter">Showing 8 Statement Pieces</span>
+    </div>
+  </section>
+
+  <!-- Catalogue Product Grid -->
+  <section class="catalogue-section">
+    <div class="catalogue-grid" id="catalogue-grid">
+
+      <!-- Item 1 -->
+      <div class="catalogue-item" data-category="wedding">
+        <a href="product.html?id=pebble-clutch">
+          <div class="catalogue-item-img-wrapper">
+            <span class="catalogue-badge">Bestseller</span>
+            <img src="https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_215035.jpg?updatedAt=1786122948588" alt="Pebble Clutch">
+          </div>
+          <div class="catalogue-item-info">
+            <div>
+              <span class="catalogue-item-cat">Festive &amp; Wedding</span>
+              <h3 class="catalogue-item-title">Pebble Clutch</h3>
+            </div>
+            <span class="catalogue-item-price">₹3,490</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="catalogue-item" data-category="signature">
+        <a href="product.html?id=aura-satchel">
+          <div class="catalogue-item-img-wrapper">
+            <span class="catalogue-badge">New Arrival</span>
+            <img src="https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214047.jpg?updatedAt=1786122948642" alt="Aura Sculptural Satchel">
+          </div>
+          <div class="catalogue-item-info">
+            <div>
+              <span class="catalogue-item-cat">Signature Collection</span>
+              <h3 class="catalogue-item-title">Aura Sculptural Satchel</h3>
+            </div>
+            <span class="catalogue-item-price">₹3,890</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="catalogue-item" data-category="cocktail">
+        <a href="product.html?id=luxe-evening-clutch">
+          <div class="catalogue-item-img-wrapper">
+            <span class="catalogue-badge">Gala Edition</span>
+            <img src="https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_213932.jpg?updatedAt=1786122948758" alt="Aura Luxe Evening Clutch">
+          </div>
+          <div class="catalogue-item-info">
+            <div>
+              <span class="catalogue-item-cat">Cocktail &amp; Evening</span>
+              <h3 class="catalogue-item-title">Aura Luxe Evening Clutch</h3>
+            </div>
+            <span class="catalogue-item-price">₹3,290</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="catalogue-item" data-category="everyday">
+        <a href="product.html?id=horizon-shoulder-bag">
+          <div class="catalogue-item-img-wrapper">
+            <span class="catalogue-badge">Trending</span>
+            <img src="https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214640.jpg?updatedAt=1786122948462" alt="Aura Horizon Shoulder Bag">
+          </div>
+          <div class="catalogue-item-info">
+            <div>
+              <span class="catalogue-item-cat">Everyday Luxury</span>
+              <h3 class="catalogue-item-title">Aura Horizon Shoulder Bag</h3>
+            </div>
+            <span class="catalogue-item-price">₹3,690</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="catalogue-item" data-category="wedding">
+        <a href="product.html?id=royal-potli">
+          <div class="catalogue-item-img-wrapper">
+            <span class="catalogue-badge">Bridal Favorite</span>
+            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1200&q=80" alt="Gold Heritage Frame Clutch">
+          </div>
+          <div class="catalogue-item-info">
+            <div>
+              <span class="catalogue-item-cat">Wedding &amp; Festive</span>
+              <h3 class="catalogue-item-title">Gold Heritage Frame Clutch</h3>
+            </div>
+            <span class="catalogue-item-price">₹3,990</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="catalogue-item" data-category="everyday">
+        <a href="product.html?id=aura-tote">
+          <div class="catalogue-item-img-wrapper">
+            <span class="catalogue-badge">Popular</span>
+            <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=1200&q=80" alt="Sophisticated Day Hobo">
+          </div>
+          <div class="catalogue-item-info">
+            <div>
+              <span class="catalogue-item-cat">Everyday Luxury</span>
+              <h3 class="catalogue-item-title">Sophisticated Day Hobo</h3>
+            </div>
+            <span class="catalogue-item-price">₹3,690</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="catalogue-item" data-category="cocktail">
+        <a href="product.html?id=velvet-opulence">
+          <div class="catalogue-item-img-wrapper">
+            <span class="catalogue-badge">Limited</span>
+            <img src="https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?auto=format&fit=crop&w=1200&q=80" alt="Celebration Capsule Clutch">
+          </div>
+          <div class="catalogue-item-info">
+            <div>
+              <span class="catalogue-item-cat">Cocktail &amp; Evening</span>
+              <h3 class="catalogue-item-title">Celebration Capsule Clutch</h3>
+            </div>
+            <span class="catalogue-item-price">₹3,190</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="catalogue-item" data-category="signature">
+        <a href="product.html?id=classic-carryall">
+          <div class="catalogue-item-img-wrapper">
+            <span class="catalogue-badge">Artisanal</span>
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1200&q=80" alt="Monochrome Architectural Tote">
+          </div>
+          <div class="catalogue-item-info">
+            <div>
+              <span class="catalogue-item-cat">Signature Series</span>
+              <h3 class="catalogue-item-title">Monochrome Architectural Tote</h3>
+            </div>
+            <span class="catalogue-item-price">₹4,490</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta-section">
+    <div class="final-cta-content">
+      <span class="subheading">Direct Assistance &amp; Custom Orders</span>
+      <h2 class="final-cta-title">Looking for <em>Custom Colors?</em></h2>
+      <p class="final-cta-desc">
+        We offer custom color matching and bridal embroidery for order batches directly from our Meerut studio. Connect with us on WhatsApp.
+      </p>
+      <button class="btn-magnetic btn-primary whatsapp-trigger">
+        <span class="btn-text">Chat with Meerut Studio</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Minimal Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3 class="footer-logo">AURA</h3>
+        <p class="footer-tagline">
+          Affordable premium handbags crafted in Meerut, India. Designed for celebrations and everyday luxury.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collections.html">Catalogue</a></li>
+          <li><a href="index.html#about">About Aura</a></li>
+          <li><a href="index.html#reviews">Client Reviews</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Occasions</h4>
+        <ul class="footer-links">
+          <li><a href="collections.html">Weddings</a></li>
+          <li><a href="collections.html">Mehendi &amp; Sangeet</a></li>
+          <li><a href="collections.html">Cocktail &amp; Party</a></li>
+          <li><a href="collections.html">Festive Gifting</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Connect</h4>
+        <ul class="footer-links">
+          <li><a href="#" class="whatsapp-trigger">WhatsApp Order</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:info@aurahandbags.com">Email Us</a></li>
+          <li><a href="#">Meerut, UP, India</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Aura Handbags. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Shipping &amp; Returns</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CDN Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+
+  <!-- Application Modules -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // Catalogue Category Filtering Function
+    function filterCatalogue(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const items = document.querySelectorAll('.catalogue-item');
+      let visibleCount = 0;
+
+      items.forEach(item => {
+        const itemCat = item.getAttribute('data-category');
+        if (category === 'all' || itemCat === category) {
+          gsap.to(item, {
+            display: 'flex',
+            opacity: 1,
+            scale: 1,
+            duration: 0.4,
+            ease: 'power2.out'
+          });
+          visibleCount++;
+        } else {
+          gsap.to(item, {
+            opacity: 0,
+            scale: 0.95,
+            duration: 0.3,
+            ease: 'power2.in',
+            onComplete: () => {
+              item.style.display = 'none';
+            }
+          });
+        }
+      });
+
+      const counter = document.getElementById('item-counter');
+      if (counter) {
+        counter.textContent = `Showing ${visibleCount} Statement Pieces`;
+      }
+    }
+  </script>
+</body>
+</html>

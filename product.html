@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet Opulence Clutch — AURA Handbags</title>
+  <meta name="description" content="Detailed view of the Velvet Opulence Clutch by Aura Handbags. Handcrafted festive clutch for weddings, cocktail galas, and celebrations.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Additional Product Detail Page Specific Styles */
+    .product-detail-section {
+      padding: 10rem 4rem 6rem 4rem;
+      background-color: var(--bg-primary);
+    }
+
+    .product-detail-container {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .breadcrumb {
+      grid-column: 1 / -1;
+      margin-bottom: 2rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .breadcrumb a {
+      color: var(--text-primary);
+      transition: color 0.3s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--accent-gold);
+    }
+
+    /* Product Gallery */
+    .product-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .main-image-container {
+      width: 100%;
+      height: 520px;
+      border-radius: 4px;
+      overflow: hidden;
+      background-color: #F3EFEA;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .main-image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      transition: transform 0.6s var(--ease-out-expo);
+    }
+
+    .thumbnail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+      gap: 0.8rem;
+    }
+
+    .thumb-item {
+      height: 100px;
+      border-radius: 3px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: border-color 0.3s ease, opacity 0.3s ease;
+      opacity: 0.7;
+      background-color: #F3EFEA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+    }
+
+    .thumb-item.active,
+    .thumb-item:hover {
+      border-color: var(--accent-gold);
+      opacity: 1;
+    }
+
+    .thumb-item img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Product Specs & Info */
+    .product-info-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .p-category {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .p-title {
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 1.2rem;
+    }
+
+    .p-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+      width: 100%;
+      padding-bottom: 1.5rem;
+    }
+
+    .p-price {
+      font-family: var(--font-sans);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .p-price-note {
+      font-size: 0.85rem;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .p-badges {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .p-badge {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.4rem 1rem;
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      color: var(--text-primary);
+    }
+
+    .p-description {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .color-selection {
+      margin-bottom: 2.5rem;
+      width: 100%;
+    }
+
+    .color-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .color-swatches {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .swatch {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(22, 22, 22, 0.25);
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .swatch.active {
+      border-color: var(--accent-gold);
+      border-width: 2px;
+      transform: scale(1.18);
+      box-shadow: 0 0 0 4px rgba(183, 138, 86, 0.25);
+    }
+
+    .p-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    .p-actions .btn-magnetic {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* Product Accordion */
+    .product-accordions {
+      width: 100%;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .accordion-header {
+      padding: 1.4rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--text-primary);
+    }
+
+    .accordion-icon {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-item.active .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s var(--ease-out-expo), padding 0.4s ease;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 300px;
+      padding-bottom: 1.5rem;
+    }
+
+    /* Styling Section */
+    .styling-section {
+      padding: var(--space-2xl) 4rem;
+      background-color: var(--bg-white);
+    }
+
+    .styling-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .styling-img {
+      width: 100%;
+      height: 600px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    /* Related Products */
+    .related-section {
+      padding: var(--space-2xl) 4rem;
+      background-color: var(--bg-primary);
+    }
+
+    @media screen and (max-width: 1024px) {
+      .product-detail-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .product-gallery {
+        position: relative;
+        top: 0;
+      }
+      .main-image-container {
+        height: 480px;
+      }
+      .styling-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Transparent Navbar -->
+  <header class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-brand">AURA</a>
+    
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="collections.html" class="nav-link">&larr; Back to Catalogue</a></li>
+      <li><a href="index.html#featured" class="nav-link">New Arrivals</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#reviews" class="nav-link">Reviews</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="nav-whatsapp-btn whatsapp-trigger" aria-label="Order on WhatsApp">
+        <svg viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m0-18.413C6.442 3.372 1.6 8.213 1.6 14.22c0 2.05.57 4.04 1.646 5.772L1.5 24.283l4.417-1.159c1.67 1.006 3.597 1.537 5.631 1.538h.005c6.01 0 10.852-4.843 10.854-10.852 0-2.898-1.129-5.623-3.18-7.674C17.175 4.085 14.45 2.96 11.601 2.96z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </button>
+
+      <div class="mobile-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Detail Section -->
+  <section class="product-detail-section">
+    <div class="product-detail-container">
+      
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <a href="collections.html">Catalogue</a> / <span id="p-breadcrumb-name">Velvet Opulence Clutch</span>
+      </div>
+
+      <!-- Left: Interactive Gallery -->
+      <div class="product-gallery">
+        <div class="main-image-container">
+          <img id="main-product-img" src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=1200&q=80" alt="Product Main View">
+        </div>
+
+        <div class="thumbnail-grid" id="thumbnail-grid">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- Right: Product Info -->
+      <div class="product-info-panel">
+        <span class="p-category" id="p-cat">Festive &amp; Wedding Capsule</span>
+        <h1 class="p-title" id="p-title">Velvet Opulence Clutch</h1>
+
+        <div class="p-price-row">
+          <span class="p-price" id="p-price">₹3,490</span>
+          <span class="p-price-note">Free Shipping Across India</span>
+        </div>
+
+        <div class="p-badges">
+          <span class="p-badge">&check; PAN India Delivery</span>
+          <span class="p-badge">&check; Cash on Delivery Available</span>
+          <span class="p-badge">&check; Handcrafted in Meerut</span>
+        </div>
+
+        <p class="p-description" id="p-desc">
+          Crafted for grand celebrations, evening galas, and wedding festivities. Features rich hand-finished velvet, polished antique gold hardware, satin inner lining, and a detachable chain strap for effortless versatile styling.
+        </p>
+
+        <!-- Color Selection with Dynamic Swatches -->
+        <div class="color-selection">
+          <span class="color-label">Color Option: <strong id="selected-color-name" style="color: var(--text-primary); font-weight: 500;">Warm Gold</strong></span>
+          <div class="color-swatches" id="color-swatches-container">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <div class="p-actions">
+          <button class="btn-magnetic btn-primary whatsapp-trigger" id="product-whatsapp-btn">
+            <span class="btn-text">Order on WhatsApp</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Accordions -->
+        <div class="product-accordions">
+          <div class="accordion-item active">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Dimensions &amp; Fit</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              Length: 22 cm | Height: 14 cm | Depth: 6 cm<br>
+              Strap Drop: 52 cm (Detachable Gold Chain)<br>
+              Fits: iPhone Pro Max, Lipstick, Compact Mirror, Cards &amp; Keys.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Craftsmanship &amp; Materials</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              Outer: Premium High-Density Velvet &amp; Metallic Accents<br>
+              Lining: Smooth Silk Satin Inner Lining<br>
+              Closure: Magnetic Snap Lock with Custom Gold Emblem.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Shipping &amp; Delivery</span>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-content">
+              Dispatched within 24 hours from our Meerut studio.<br>
+              Free Standard Shipping (3-5 business days across India).<br>
+              Cash on Delivery (COD) supported with zero hidden charges.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Editorial Styling Feature -->
+  <section class="styling-section">
+    <div class="styling-grid">
+      <div>
+        <span class="subheading">Styling Guide</span>
+        <h2 style="font-size: clamp(2.2rem, 3.5vw, 3.5rem); margin-bottom: 1.5rem;">How to Style for Celebrations</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem;">
+          Pair with an embellished organza saree, silk lehenga, or a sharp tailored blazer for cocktail evenings. Its metallic chain converts it from a chic handbag to a statement shoulder piece in seconds.
+        </p>
+        <button class="btn-magnetic btn-secondary whatsapp-trigger">
+          <span>Ask Stylist on WhatsApp</span>
+        </button>
+      </div>
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80" alt="Editorial Fashion Styling" class="styling-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Collection -->
+  <section class="related-section">
+    <div class="section-header" style="max-width: 1000px;">
+      <span class="subheading">Complementary Pieces</span>
+      <h2>You May Also Admire</h2>
+    </div>
+
+    <div class="collection-editorial-grid">
+      <!-- Related 1 -->
+      <div class="collection-item collection-item-1" style="grid-column: span 6;">
+        <a href="product.html?id=royal-potli">
+          <div class="item-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=80" alt="Royal Embellished Potli">
+          </div>
+          <div class="item-info">
+            <div class="item-details">
+              <span class="item-cat">Cocktail &amp; Reception</span>
+              <h3 class="item-name">Royal Embellished Potli</h3>
+            </div>
+            <div class="item-price-tag">
+              <span class="item-price">₹2,990</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Related 2 -->
+      <div class="collection-item collection-item-2" style="grid-column: span 6; margin-top: 0;">
+        <a href="product.html?id=aura-tote">
+          <div class="item-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=1200&q=80" alt="Aura Minimalist Tote">
+          </div>
+          <div class="item-info">
+            <div class="item-details">
+              <span class="item-cat">Everyday Luxury</span>
+              <h3 class="item-name">Aura Minimalist Tote</h3>
+            </div>
+            <div class="item-price-tag">
+              <span class="item-price">₹3,890</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3 class="footer-logo">AURA</h3>
+        <p class="footer-tagline">
+          Affordable premium handbags crafted in Meerut, India. Designed for celebrations and everyday luxury.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collections.html">Catalogue</a></li>
+          <li><a href="index.html#about">About Aura</a></li>
+          <li><a href="index.html#reviews">Client Reviews</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Occasions</h4>
+        <ul class="footer-links">
+          <li><a href="collections.html">Weddings</a></li>
+          <li><a href="collections.html">Mehendi &amp; Sangeet</a></li>
+          <li><a href="collections.html">Cocktail &amp; Party</a></li>
+          <li><a href="collections.html">Festive Gifting</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Connect</h4>
+        <ul class="footer-links">
+          <li><a href="#" class="whatsapp-trigger">WhatsApp Order</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:info@aurahandbags.com">Email Us</a></li>
+          <li><a href="#">Meerut, UP, India</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Aura Handbags. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Shipping &amp; Returns</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CDN Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+
+  <!-- Application Modules -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // Comprehensive Product Database with Color Variants & Dedicated Photos
+    const productsDatabase = {
+      'pebble-clutch': {
+        title: 'Pebble Clutch',
+        cat: 'Festive & Wedding Capsule',
+        price: '₹3,490',
+        desc: 'The signature Pebble Clutch features a smooth organic silhouette crafted with premium finishes. Complete with polished hardware, silk satin lining, and a detachable chain strap for versatile handheld or shoulder styling.',
+        colors: {
+          brown: {
+            name: 'Brown',
+            hex: '#7E4E2C',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_215035.jpg?updatedAt=1786122948588',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_215035.jpg?updatedAt=1786122948588',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223808.jpg?updatedAt=1786122949013',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223742.jpg?updatedAt=1786122949026',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223755.jpg?updatedAt=1786122949128'
+            ]
+          },
+          white: {
+            name: 'White',
+            hex: '#F2EFE9',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223808.jpg?updatedAt=1786122949013',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223808.jpg?updatedAt=1786122949013',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_215035.jpg?updatedAt=1786122948588',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223742.jpg?updatedAt=1786122949026',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223755.jpg?updatedAt=1786122949128'
+            ]
+          },
+          black: {
+            name: 'Black',
+            hex: '#1A1A1A',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223742.jpg?updatedAt=1786122949026',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223742.jpg?updatedAt=1786122949026',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_215035.jpg?updatedAt=1786122948588',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223808.jpg?updatedAt=1786122949013',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223755.jpg?updatedAt=1786122949128'
+            ]
+          },
+          yellow: {
+            name: 'Butter Yellow',
+            hex: '#EAD196',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223755.jpg?updatedAt=1786122949128',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223755.jpg?updatedAt=1786122949128',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_215035.jpg?updatedAt=1786122948588',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223808.jpg?updatedAt=1786122949013',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223742.jpg?updatedAt=1786122949026'
+            ]
+          }
+        }
+      },
+      'aura-satchel': {
+        title: 'Aura Sculptural Satchel',
+        cat: 'Signature Collection',
+        price: '₹3,890',
+        defaultImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214047.jpg?updatedAt=1786122948642',
+        desc: 'An architectural silhouette designed for modern elegance. Handcrafted with smooth full-grain finishes, polished metallic hardware, and a comfortable structured shoulder drop.',
+        colors: {
+          blue: {
+            name: 'Soft Blue',
+            hex: '#7895B2',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214546.jpg?updatedAt=1786122948774',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214047.jpg?updatedAt=1786122948642',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214546.jpg?updatedAt=1786122948774',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214058.jpg?updatedAt=1786122948714'
+            ]
+          },
+          brown: {
+            name: 'Rich Brown',
+            hex: '#6E3B27',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214058.jpg?updatedAt=1786122948714',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214047.jpg?updatedAt=1786122948642',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214058.jpg?updatedAt=1786122948714',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214546.jpg?updatedAt=1786122948774'
+            ]
+          },
+          red: {
+            name: 'Bold Red',
+            hex: '#9E2A2B',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214058.jpg?updatedAt=1786122948714',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214047.jpg?updatedAt=1786122948642',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214058.jpg?updatedAt=1786122948714',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214546.jpg?updatedAt=1786122948774'
+            ]
+          }
+        }
+      },
+      'luxe-evening-clutch': {
+        title: 'Aura Luxe Evening Clutch',
+        cat: 'Cocktail & Evening Capsule',
+        price: '₹3,290',
+        defaultImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_213932.jpg?updatedAt=1786122948758',
+        desc: 'A statement evening clutch crafted for gala dinners, receptions, and festive celebrations. Features rich polished hardware, satin lining, and a detachable fine gold shoulder chain.',
+        colors: {
+          ivory: {
+            name: 'Ivory White',
+            hex: '#FFFFFF',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214004.jpg?updatedAt=1786122948622',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_213932.jpg?updatedAt=1786122948758',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214004.jpg?updatedAt=1786122948622',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214016.jpg?updatedAt=1786122948646',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214029.jpg?updatedAt=1786122948606'
+            ]
+          },
+          ruby: {
+            name: 'Ruby Red',
+            hex: '#9E1B32',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214016.jpg?updatedAt=1786122948646',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_213932.jpg?updatedAt=1786122948758',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214016.jpg?updatedAt=1786122948646',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214004.jpg?updatedAt=1786122948622',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214029.jpg?updatedAt=1786122948606'
+            ]
+          },
+          black: {
+            name: 'Classic Black',
+            hex: '#1A1A1A',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214029.jpg?updatedAt=1786122948606',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_213932.jpg?updatedAt=1786122948758',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214029.jpg?updatedAt=1786122948606',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214004.jpg?updatedAt=1786122948622',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214016.jpg?updatedAt=1786122948646'
+            ]
+          }
+        }
+      },
+      'horizon-shoulder-bag': {
+        title: 'Aura Horizon Shoulder Bag',
+        cat: 'Everyday Luxury Capsule',
+        price: '₹3,690',
+        defaultImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214640.jpg?updatedAt=1786122948462',
+        desc: 'A sculpted crescent shoulder bag designed for seamless transition from desk to dinner. Crafted with premium full-grain finishes, polished metallic accents, and a wide ergonomic shoulder strap.',
+        colors: {
+          black: {
+            name: 'Black',
+            hex: '#1A1A1A',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214727.jpg?updatedAt=1786122948636',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214640.jpg?updatedAt=1786122948462',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214727.jpg?updatedAt=1786122948636',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214716.jpg?updatedAt=1786122948959',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223906.jpg?updatedAt=1786122949059',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214659.jpg?updatedAt=1786168202530',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214650.jpg?updatedAt=1786168112069'
+            ]
+          },
+          beige: {
+            name: 'Sand Beige',
+            hex: '#D7C4B7',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214716.jpg?updatedAt=1786122948959',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214640.jpg?updatedAt=1786122948462',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214716.jpg?updatedAt=1786122948959',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214727.jpg?updatedAt=1786122948636',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223906.jpg?updatedAt=1786122949059',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214659.jpg?updatedAt=1786168202530',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214650.jpg?updatedAt=1786168112069'
+            ]
+          },
+          brown: {
+            name: 'Mocha Brown',
+            hex: '#5C3A21',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223906.jpg?updatedAt=1786122949059',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214640.jpg?updatedAt=1786122948462',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223906.jpg?updatedAt=1786122949059',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214727.jpg?updatedAt=1786122948636',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214716.jpg?updatedAt=1786122948959',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214659.jpg?updatedAt=1786168202530',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214650.jpg?updatedAt=1786168112069'
+            ]
+          },
+          cherry: {
+            name: 'Cherry Red',
+            hex: '#8B0000',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214659.jpg?updatedAt=1786168202530',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214640.jpg?updatedAt=1786122948462',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214659.jpg?updatedAt=1786168202530',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214727.jpg?updatedAt=1786122948636',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214716.jpg?updatedAt=1786122948959',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223906.jpg?updatedAt=1786122949059',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214650.jpg?updatedAt=1786168112069'
+            ]
+          },
+          white: {
+            name: 'Pearl White',
+            hex: '#FFFFFF',
+            mainImg: 'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214650.jpg?updatedAt=1786168112069',
+            thumbs: [
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214640.jpg?updatedAt=1786122948462',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214650.jpg?updatedAt=1786168112069',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214727.jpg?updatedAt=1786122948636',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214716.jpg?updatedAt=1786122948959',
+              'https://ik.imagekit.io/dhyh95euj/IMG_20260807_223906.jpg?updatedAt=1786122949059',
+              'https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214659.jpg?updatedAt=1786168202530'
+            ]
+          }
+        }
+      },
+      'velvet-opulence': {
+        title: 'Velvet Opulence Clutch',
+        cat: 'Festive & Wedding Capsule',
+        price: '₹3,490',
+        desc: 'Crafted for grand celebrations, evening galas, and wedding festivities. Features rich hand-finished velvet, polished antique gold hardware, satin inner lining, and a detachable chain strap for effortless versatile styling.',
+        colors: {
+          gold: {
+            name: 'Warm Gold',
+            hex: '#C5A059',
+            mainImg: 'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=1200&q=80',
+            thumbs: [
+              'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=400&q=80'
+            ]
+          },
+          black: {
+            name: 'Classic Black',
+            hex: '#1A1A1A',
+            mainImg: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1200&q=80',
+            thumbs: [
+              'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=400&q=80'
+            ]
+          },
+          ruby: {
+            name: 'Imperial Ruby',
+            hex: '#7A1C1C',
+            mainImg: 'https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?auto=format&fit=crop&w=1200&q=80',
+            thumbs: [
+              'https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=400&q=80'
+            ]
+          }
+        }
+      },
+      'aura-tote': {
+        title: 'Aura Minimalist Tote',
+        cat: 'Everyday Luxury',
+        price: '₹3,890',
+        desc: 'Architectural minimalism crafted with supplest full-grain leather texture. Features a structured base, spacious interior compartment, and dual top handles engineered for weight distribution.',
+        colors: {
+          tan: {
+            name: 'Saddle Tan',
+            hex: '#9E6B41',
+            mainImg: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=1200&q=80',
+            thumbs: [
+              'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=400&q=80'
+            ]
+          },
+          black: {
+            name: 'Midnight Black',
+            hex: '#1A1A1A',
+            mainImg: 'https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=1200&q=80',
+            thumbs: [
+              'https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=400&q=80'
+            ]
+          },
+          cream: {
+            name: 'Champagne Cream',
+            hex: '#EADBC8',
+            mainImg: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1200&q=80',
+            thumbs: [
+              'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=400&q=80'
+            ]
+          }
+        }
+      },
+      'royal-potli': {
+        title: 'Royal Embellished Potli',
+        cat: 'Cocktail & Reception',
+        price: '₹2,990',
+        desc: 'A nod to traditional Indian heritage reimagined through modern minimalism. Hand-braided drawstrings, metallic tassel accents, and plush velvet fabric.',
+        colors: {
+          gold: {
+            name: 'Royal Gold',
+            hex: '#D4AF37',
+            mainImg: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=80',
+            thumbs: [
+              'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?auto=format&fit=crop&w=400&q=80'
+            ]
+          },
+          emerald: {
+            name: 'Emerald Green',
+            hex: '#1B4D3E',
+            mainImg: 'https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=1200&q=80',
+            thumbs: [
+              'https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=80'
+            ]
+          },
+          maroon: {
+            name: 'Deep Maroon',
+            hex: '#6B1D2F',
+            mainImg: 'https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?auto=format&fit=crop&w=1200&q=80',
+            thumbs: [
+              'https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=400&q=80'
+            ]
+          }
+        }
+      },
+      'classic-carryall': {
+        title: 'Structured Classic Carryall',
+        cat: 'Signature Series',
+        price: '₹4,290',
+        desc: 'Clean lines, precise stitching, and subtle gold hardware. The ultimate day-to-evening statement piece for women who appreciate refined understatement.',
+        colors: {
+          tan: {
+            name: 'Chestnut Leather',
+            hex: '#8C5230',
+            mainImg: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1200&q=80',
+            thumbs: [
+              'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=400&q=80'
+            ]
+          },
+          black: {
+            name: 'Onyx Black',
+            hex: '#111111',
+            mainImg: 'https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=1200&q=80',
+            thumbs: [
+              'https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80',
+              'https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=400&q=80'
+            ]
+          }
+        }
+      }
+    };
+
+    let activeProductData = null;
+
+    function switchProductImage(element, imgUrl) {
+      document.querySelectorAll('.thumb-item').forEach(item => item.classList.remove('active'));
+      element.classList.add('active');
+      const mainImg = document.getElementById('main-product-img');
+      if (mainImg) {
+        if (typeof gsap !== 'undefined') {
+          gsap.to(mainImg, {
+            opacity: 0,
+            duration: 0.15,
+            onComplete: () => {
+              mainImg.src = imgUrl;
+              gsap.to(mainImg, { opacity: 1, duration: 0.3 });
+              if (window.applyOnlineWatermarks) window.applyOnlineWatermarks();
+            }
+          });
+        } else {
+          mainImg.src = imgUrl;
+          if (window.applyOnlineWatermarks) window.applyOnlineWatermarks();
+        }
+      }
+    }
+
+    function selectColorVariant(colorKey) {
+      if (!activeProductData || !activeProductData.colors || !activeProductData.colors[colorKey]) return;
+
+      const variant = activeProductData.colors[colorKey];
+
+      // Update Swatch Active Rings
+      document.querySelectorAll('.swatch').forEach(sw => {
+        if (sw.getAttribute('data-color-key') === colorKey) {
+          sw.classList.add('active');
+        } else {
+          sw.classList.remove('active');
+        }
+      });
+
+      // Update Label
+      const colorLabel = document.getElementById('selected-color-name');
+      if (colorLabel) colorLabel.textContent = variant.name;
+
+      // Update Main Image
+      const mainImg = document.getElementById('main-product-img');
+      if (mainImg) {
+        if (typeof gsap !== 'undefined') {
+          gsap.to(mainImg, {
+            opacity: 0,
+            duration: 0.15,
+            onComplete: () => {
+              mainImg.src = variant.mainImg;
+              gsap.to(mainImg, { opacity: 1, duration: 0.3 });
+              if (window.applyOnlineWatermarks) window.applyOnlineWatermarks();
+            }
+          });
+        } else {
+          mainImg.src = variant.mainImg;
+          if (window.applyOnlineWatermarks) window.applyOnlineWatermarks();
+        }
+      }
+
+      // Update Thumbnails Grid
+      const thumbGrid = document.getElementById('thumbnail-grid');
+      if (thumbGrid && variant.thumbs) {
+        thumbGrid.innerHTML = variant.thumbs.map((tUrl, idx) => `
+          <div class="thumb-item ${idx === 0 ? 'active' : ''}" onclick="switchProductImage(this, '${tUrl.replace('w=400', 'w=1200')}')">
+            <img src="${tUrl}" alt="${variant.name} View ${idx + 1}">
+          </div>
+        `).join('');
+      }
+
+      if (window.applyOnlineWatermarks) setTimeout(window.applyOnlineWatermarks, 50);
+    }
+
+    // Accordion Toggle
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
+
+    // Initialize Page & Dynamic URL Query Decoding (?id=...)
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      let productId = params.get('id');
+
+      if (!productId || !productsDatabase[productId]) {
+        productId = 'pebble-clutch';
+      }
+
+      activeProductData = productsDatabase[productId];
+
+      // Populate Text Elements
+      document.getElementById('p-title').textContent = activeProductData.title;
+      document.getElementById('p-breadcrumb-name').textContent = activeProductData.title;
+      document.getElementById('p-cat').textContent = activeProductData.cat;
+      document.getElementById('p-price').textContent = activeProductData.price;
+      document.getElementById('p-desc').textContent = activeProductData.desc;
+      document.title = `${activeProductData.title} — AURA Handbags`;
+
+      if (activeProductData.defaultImg) {
+        document.getElementById('main-product-img').src = activeProductData.defaultImg;
+      }
+
+      // Render Swatches
+      const swatchesContainer = document.getElementById('color-swatches-container');
+      if (swatchesContainer && activeProductData.colors) {
+        const colorKeys = Object.keys(activeProductData.colors);
+        
+        swatchesContainer.innerHTML = colorKeys.map((k, idx) => {
+          const c = activeProductData.colors[k];
+          return `
+            <div class="swatch ${idx === 0 && !activeProductData.defaultImg ? 'active' : ''}" 
+                 style="background-color: ${c.hex};" 
+                 title="${c.name}" 
+                 data-color-key="${k}" 
+                 onclick="selectColorVariant('${k}')"></div>
+          `;
+        }).join('');
+
+        if (colorKeys.length > 0) {
+          const firstColor = activeProductData.colors[colorKeys[0]];
+          const thumbGrid = document.getElementById('thumbnail-grid');
+          if (thumbGrid && firstColor.thumbs) {
+            thumbGrid.innerHTML = firstColor.thumbs.map((tUrl, idx) => `
+              <div class="thumb-item ${idx === 0 ? 'active' : ''}" onclick="switchProductImage(this, '${tUrl}')">
+                <img src="${tUrl}" alt="Thumbnail View ${idx + 1}">
+              </div>
+            `).join('');
+          }
+        }
+      }
+
+      if (window.applyOnlineWatermarks) setTimeout(window.applyOnlineWatermarks, 100);
+    });
+  </script>
+</body>
+</html>

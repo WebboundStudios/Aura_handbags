@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA — Designed for Celebrations | Luxury Handbags</title>
+  <meta name="description" content="Aura Handbags - Affordable luxury women's handbags, clutches & statement pieces crafted for weddings, festive occasions, and everyday elegance. Based in Meerut, India.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- 1. Page Loader -->
+  <div class="page-loader" id="loader">
+    <div class="loader-brand">
+      <span>AURA</span>
+    </div>
+    <div class="loader-progress-container">
+      <div class="loader-progress-bar"></div>
+    </div>
+    <div class="loader-subtitle">Meerut &bull; Handcrafted Luxury</div>
+  </div>
+
+  <!-- 2. Transparent Navbar -->
+  <header class="navbar" id="navbar">
+    <a href="index.html" class="nav-brand">AURA</a>
+    
+    <ul class="nav-links" id="nav-menu">
+      <li><a href="collections.html" class="nav-link">Catalogue</a></li>
+      <li><a href="#featured" class="nav-link">New Arrivals</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#reviews" class="nav-link">Reviews</a></li>
+      <li><a href="#footer" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="nav-whatsapp-btn whatsapp-trigger" aria-label="Order on WhatsApp">
+        <svg viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m0-18.413C6.442 3.372 1.6 8.213 1.6 14.22c0 2.05.57 4.04 1.646 5.772L1.5 24.283l4.417-1.159c1.67 1.006 3.597 1.537 5.631 1.538h.005c6.01 0 10.852-4.843 10.854-10.852 0-2.898-1.129-5.623-3.18-7.674C17.175 4.085 14.45 2.96 11.601 2.96z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </button>
+
+      <div class="mobile-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="hero-tag">AURA HANDBAGS &bull; MEERUT</span>
+        <h1 class="hero-title split-text">Designed for <em>Celebrations.</em></h1>
+        <p class="hero-description">
+          Elegant handcrafted handbags created for weddings, festive occasions, and everyday luxury. High-end design crafted with accessible elegance.
+        </p>
+        <a href="collections.html" class="btn-magnetic btn-primary">
+          <span class="btn-text">Explore Catalogue</span>
+          <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <a href="product.html?id=classic-carryall">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1600&q=80" alt="Aura Signature Luxury Leather Handbag">
+          </a>
+        </div>
+        <div class="hero-floating-tag">
+          <span class="tag-label">Festive Statement</span>
+          <span class="tag-val">Pan-India Delivery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Collection (Asymmetric Editorial Layout) -->
+  <section class="collection-section" id="collection">
+    <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; max-width: 100%;">
+      <div>
+        <span class="subheading">Curated Editions</span>
+        <h2 class="section-title">The Statement Collection</h2>
+      </div>
+      <a href="collections.html" class="btn-magnetic btn-secondary" style="margin-bottom: 1rem;">
+        <span>View Full Catalogue &rarr;</span>
+      </a>
+    </div>
+
+    <div class="collection-editorial-grid">
+      <!-- Item 1 -->
+      <div class="collection-item collection-item-1">
+        <a href="product.html?id=pebble-clutch">
+          <div class="item-image-wrapper">
+            <img src="https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_215035.jpg?updatedAt=1786122948588" alt="Pebble Clutch">
+          </div>
+          <div class="item-info">
+            <div class="item-details">
+              <span class="item-cat">Festive &amp; Wedding</span>
+              <h3 class="item-name">Pebble Clutch</h3>
+            </div>
+            <div class="item-price-tag">
+              <span class="item-price">₹3,490</span>
+              <span class="item-cta">View Details &rarr;</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="collection-item collection-item-2">
+        <a href="product.html?id=aura-satchel">
+          <div class="item-image-wrapper">
+            <img src="https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214047.jpg?updatedAt=1786122948642" alt="Aura Sculptural Satchel">
+          </div>
+          <div class="item-info">
+            <div class="item-details">
+              <span class="item-cat">Signature Collection</span>
+              <h3 class="item-name">Aura Sculptural Satchel</h3>
+            </div>
+            <div class="item-price-tag">
+              <span class="item-price">₹3,890</span>
+              <span class="item-cta">View Details &rarr;</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="collection-item collection-item-3">
+        <a href="product.html?id=luxe-evening-clutch">
+          <div class="item-image-wrapper">
+            <img src="https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_213932.jpg?updatedAt=1786122948758" alt="Aura Luxe Evening Clutch">
+          </div>
+          <div class="item-info">
+            <div class="item-details">
+              <span class="item-cat">Cocktail &amp; Evening</span>
+              <h3 class="item-name">Aura Luxe Evening Clutch</h3>
+            </div>
+            <div class="item-price-tag">
+              <span class="item-price">₹3,290</span>
+              <span class="item-cta">View Details &rarr;</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="collection-item collection-item-4">
+        <a href="product.html?id=horizon-shoulder-bag">
+          <div class="item-image-wrapper">
+            <img src="https://ik.imagekit.io/dhyh95euj/Screenshot_2026_0807_214640.jpg?updatedAt=1786122948462" alt="Aura Horizon Shoulder Bag">
+          </div>
+          <div class="item-info">
+            <div class="item-details">
+              <span class="item-cat">Everyday Luxury</span>
+              <h3 class="item-name">Aura Horizon Shoulder Bag</h3>
+            </div>
+            <div class="item-price-tag">
+              <span class="item-price">₹3,690</span>
+              <span class="item-cta">View Details &rarr;</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Pinned Horizontal Scroll Section -->
+  <section class="horizontal-scroll-section" id="featured">
+    <div class="horizontal-scroll-container">
+      <div class="horizontal-track">
+        
+        <!-- Slide 1 -->
+        <div class="horizontal-slide">
+          <div class="slide-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1600&q=80" alt="Bridal Gold Clutch">
+          </div>
+          <div class="slide-content">
+            <span class="slide-number">01 / 03</span>
+            <h3 class="slide-title">Bridal Heritage Collection</h3>
+            <p class="slide-desc">Intricately crafted for Indian weddings, cocktail galas, and festive soirées. Crafted with timeless metallic accents.</p>
+            <a href="product.html?id=royal-potli" class="btn-magnetic btn-secondary slide-btn">
+              <span>View Product</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="horizontal-slide">
+          <div class="slide-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?auto=format&fit=crop&w=1600&q=80" alt="Sophisticated Day Tote">
+          </div>
+          <div class="slide-content">
+            <span class="slide-number">02 / 03</span>
+            <h3 class="slide-title">Contemporary Silhouette</h3>
+            <p class="slide-desc">Clean proportions, lightweight structured leathers, and calm architectural simplicity designed to transition from work to evening.</p>
+            <a href="product.html?id=aura-tote" class="btn-magnetic btn-secondary slide-btn">
+              <span>View Product</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="horizontal-slide">
+          <div class="slide-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?auto=format&fit=crop&w=1600&q=80" alt="Festive Party Clutch">
+          </div>
+          <div class="slide-content">
+            <span class="slide-number">03 / 03</span>
+            <h3 class="slide-title">The Celebration Capsule</h3>
+            <p class="slide-desc">Compact statement clutches featuring rich texture, subtle hardware details, and comfortable versatile chain straps.</p>
+            <a href="product.html?id=velvet-opulence" class="btn-magnetic btn-secondary slide-btn">
+              <span>View Product</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. About Aura (Editorial Split Layout) -->
+  <section class="about-section" id="about">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-img-container">
+          <img src="https://images.unsplash.com/photo-1614179689702-355944cd0918?auto=format&fit=crop&w=1200&q=80" alt="Handbag Craftsmanship Detail">
+        </div>
+        <div class="about-badge">
+          <span>Rooted In</span>
+          MEERUT
+        </div>
+      </div>
+
+      <div class="about-content">
+        <span class="subheading">Our Essence</span>
+        <h2 class="about-title">Affordable Luxury, Uncompromising Polish.</h2>
+        <p class="about-lead">
+          Founded in Meerut, Aura Handbags was born to bridge high-end editorial aesthetic with accessible pricing.
+        </p>
+        <p class="about-text">
+          We believe every woman deserves a statement handbag that feels premium, looks timeless, and completes every celebration without prohibitive pricing. From intimate mehendi gatherings to grand wedding receptions, our designs elevate your style effortlessly.
+        </p>
+
+        <div class="about-stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">
+              <span class="counter-val" data-target="150">0</span>
+              <span class="plus">+</span>
+            </div>
+            <span class="stat-label">Happy Customers</span>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number">
+              <span>PAN</span>
+            </div>
+            <span class="stat-label">India Delivery</span>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number">
+              <span>COD</span>
+            </div>
+            <span class="stat-label">Cash on Delivery</span>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-number">
+              <span>FREE</span>
+            </div>
+            <span class="stat-label">Shipping Across India</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Why Choose Aura (Typography-First, No Icons) -->
+  <section class="why-section">
+    <div class="why-header">
+      <span class="subheading">The Aura Standard</span>
+      <h2>Designed Around You</h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-num">01</span>
+        <h3 class="why-title">Trendy &amp; Elegant</h3>
+        <p class="why-desc">Modern silhouettes inspired by international runways, tailored specifically for Indian festive and daily sensibilities.</p>
+      </div>
+
+      <div class="why-card">
+        <span class="why-num">02</span>
+        <h3 class="why-title">PAN India Delivery</h3>
+        <p class="why-desc">Fast, secure shipping delivering directly from Meerut to your doorstep anywhere across India with free shipping.</p>
+      </div>
+
+      <div class="why-card">
+        <span class="why-num">03</span>
+        <h3 class="why-title">COD Available</h3>
+        <p class="why-desc">Seamless Cash on Delivery support for total peace of mind and hassle-free shopping confidence.</p>
+      </div>
+
+      <div class="why-card">
+        <span class="why-num">04</span>
+        <h3 class="why-title">Celebration Ready</h3>
+        <p class="why-desc">Custom curated collections for Weddings, Mehendi, Cocktails, Receptions, Parties, and Gifting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Editorial Banner -->
+  <section class="editorial-banner-section">
+    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=2000&q=80" alt="Aura Editorial Fashion Campaign" class="editorial-banner-bg">
+    <div class="editorial-banner-content">
+      <span class="editorial-banner-tag">AUTUMN / WINTER EDITION</span>
+      <h2 class="editorial-banner-title">Designed to Complete Every <em>Celebration.</em></h2>
+    </div>
+  </section>
+
+  <!-- 9. Instagram Gallery Masonry -->
+  <section class="instagram-section">
+    <div class="section-header" style="text-align: center; margin: 0 auto 4rem auto;">
+      <span class="subheading">Social Gallery</span>
+      <h2>@aurahandbags.official</h2>
+    </div>
+
+    <div class="insta-grid">
+      <div class="insta-item insta-item-tall">
+        <img src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=800&q=80" alt="Instagram Post 1">
+        <div class="insta-overlay">
+          <span>View on Instagram</span>
+        </div>
+      </div>
+
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80" alt="Instagram Post 2">
+        <div class="insta-overlay">
+          <span>View on Instagram</span>
+        </div>
+      </div>
+
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=800&q=80" alt="Instagram Post 3">
+        <div class="insta-overlay">
+          <span>View on Instagram</span>
+        </div>
+      </div>
+
+      <div class="insta-item insta-item-tall">
+        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80" alt="Instagram Post 4">
+        <div class="insta-overlay">
+          <span>View on Instagram</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Customer Reviews -->
+  <section class="reviews-section" id="reviews">
+    <div class="reviews-container">
+      <div class="quote-icon">&ldquo;</div>
+      <p class="review-quote">
+        "I carried the Velvet Opulence Clutch to my sister’s cocktail in Delhi, and received non-stop compliments. It looks like a high-end designer piece at a fraction of the cost."
+      </p>
+      <div class="review-author">
+        <div class="author-avatar">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Ananya Sharma">
+        </div>
+        <div class="author-meta">
+          <h4 class="author-name">Ananya Sharma</h4>
+          <span class="author-location">Delhi &bull; Verified Client</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Final Call-to-Action -->
+  <section class="final-cta-section">
+    <div class="final-cta-content">
+      <span class="subheading">Direct Assistance &amp; Orders</span>
+      <h2 class="final-cta-title">Find Your Perfect <em>Statement Piece.</em></h2>
+      <p class="final-cta-desc">
+        Need assistance picking the right clutch for an upcoming wedding or festive outfit? Chat directly with us on WhatsApp for personalized recommendations.
+      </p>
+      <button class="btn-magnetic btn-primary whatsapp-trigger">
+        <span class="btn-text">Order on WhatsApp</span>
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- 12. Minimal Footer -->
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3 class="footer-logo">AURA</h3>
+        <p class="footer-tagline">
+          Affordable premium handbags crafted in Meerut, India. Designed for celebrations and everyday luxury.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collections.html">Catalogue</a></li>
+          <li><a href="#about">About Aura</a></li>
+          <li><a href="#reviews">Client Reviews</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Occasions</h4>
+        <ul class="footer-links">
+          <li><a href="collections.html">Weddings</a></li>
+          <li><a href="collections.html">Mehendi &amp; Sangeet</a></li>
+          <li><a href="collections.html">Cocktail &amp; Party</a></li>
+          <li><a href="collections.html">Festive Gifting</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Connect</h4>
+        <ul class="footer-links">
+          <li><a href="#" class="whatsapp-trigger">WhatsApp Order</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:info@aurahandbags.com">Email Us</a></li>
+          <li><a href="#">Meerut, UP, India</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Aura Handbags. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Shipping &amp; Returns</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CDN Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+
+  <!-- Application Modules -->
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
