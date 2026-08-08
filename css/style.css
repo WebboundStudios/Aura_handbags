@@ -192,15 +192,17 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: padding 0.5s var(--ease-out-expo), background-color 0.5s ease, border-bottom 0.5s ease;
+  background-color: transparent;
+  transition: padding 0.5s var(--ease-out-expo), background-color 0.5s ease, border-bottom 0.5s ease, box-shadow 0.5s ease;
 }
 
 .navbar.scrolled {
   padding: 1.2rem 4rem;
-  background-color: rgba(248, 245, 241, 0.92);
+  background-color: var(--bg-primary);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 /* Online Image Watermark Badge */

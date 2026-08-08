@@ -7,17 +7,27 @@ document.addEventListener('DOMContentLoaded', () => {
      1. Navbar Scroll Transition
      ------------------------------------------------------------------------ */
   const navbar = document.querySelector('.navbar');
-  const scrollThreshold = 80;
+  const heroSection = document.querySelector('.hero-section');
 
   function updateNavbar() {
-    if (window.scrollY > scrollThreshold) {
-      navbar.classList.add('scrolled');
+    if (!navbar) return;
+
+    if (heroSection) {
+      const navHeight = navbar.offsetHeight || 80;
+      const heroThreshold = heroSection.offsetHeight - navHeight;
+
+      if (window.scrollY > heroThreshold) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     } else {
-      navbar.classList.remove('scrolled');
+      navbar.classList.add('scrolled');
     }
   }
 
   window.addEventListener('scroll', updateNavbar);
+  window.addEventListener('resize', updateNavbar);
   updateNavbar();
 
   /* ------------------------------------------------------------------------
@@ -73,6 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
           targetElement.scrollIntoView({ behavior: 'smooth' });
         }
       }
+    });
+  });
   /* ------------------------------------------------------------------------
      5. Automatic Online Stock Image Watermarking ("ONLINE IMAGE")
      ------------------------------------------------------------------------ */
