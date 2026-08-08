@@ -4,26 +4,13 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   /* ------------------------------------------------------------------------
-     1. Navbar Scroll Transition
+     1. Navbar Scroll Transition (Solid Header)
      ------------------------------------------------------------------------ */
   const navbar = document.querySelector('.navbar');
-  const heroSection = document.querySelector('.hero-section');
 
   function updateNavbar() {
     if (!navbar) return;
-
-    if (heroSection) {
-      const navHeight = navbar.offsetHeight || 80;
-      const heroThreshold = heroSection.offsetHeight - navHeight;
-
-      if (window.scrollY > heroThreshold) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    } else {
-      navbar.classList.add('scrolled');
-    }
+    navbar.classList.add('scrolled');
   }
 
   window.addEventListener('scroll', updateNavbar);
