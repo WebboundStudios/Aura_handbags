@@ -187,17 +187,15 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.5rem 4rem;
+  padding: 2rem 4rem;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--bg-primary);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  transition: padding 0.5s var(--ease-out-expo), background-color 0.5s ease, border-bottom 0.5s ease, box-shadow 0.5s ease;
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+  transition: padding 0.4s var(--ease-out-expo), background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .navbar.scrolled {

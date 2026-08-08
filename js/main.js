@@ -4,13 +4,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   /* ------------------------------------------------------------------------
-     1. Navbar Scroll Transition (Solid Header)
+     1. Navbar Scroll Transition (Blends with Hero BG)
      ------------------------------------------------------------------------ */
   const navbar = document.querySelector('.navbar');
+  const scrollThreshold = 40;
 
   function updateNavbar() {
     if (!navbar) return;
-    navbar.classList.add('scrolled');
+    if (window.scrollY > scrollThreshold) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
   }
 
   window.addEventListener('scroll', updateNavbar);
