@@ -18,7 +18,7 @@
   <style>
     /* Additional Product Detail Page Specific Styles */
     .product-detail-section {
-      padding: 10rem 4rem 6rem 4rem;
+      padding: 5.5rem 4rem 4rem 4rem;
       background-color: var(--bg-primary);
     }
 
@@ -27,20 +27,20 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
-      gap: 5rem;
+      gap: 3.5rem;
       align-items: start;
     }
 
     .breadcrumb {
       grid-column: 1 / -1;
-      margin-bottom: 2rem;
-      font-size: 0.8rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       color: var(--text-secondary);
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.6rem;
     }
 
     .breadcrumb a {
@@ -61,7 +61,7 @@
 
     .main-image-container {
       width: 100%;
-      height: 520px;
+      height: 460px;
       border-radius: 4px;
       overflow: hidden;
       background-color: #F3EFEA;
@@ -83,7 +83,7 @@
 
     .thumbnail-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 0.8rem;
     }
 
@@ -121,94 +121,70 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
     }
-
     .p-category {
       font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.15em;
       color: var(--accent-gold);
       font-weight: 600;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.4rem;
     }
 
     .p-title {
-      font-size: clamp(2.5rem, 4vw, 4rem);
-      line-height: 1.05;
-      margin-bottom: 1.2rem;
+      font-size: clamp(2.2rem, 3.5vw, 3.5rem);
+      line-height: 1.08;
+      margin-bottom: 0.8rem;
     }
 
     .p-price-row {
       display: flex;
       align-items: baseline;
       gap: 1.2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       border-bottom: 1px solid var(--border-color);
       width: 100%;
-      padding-bottom: 1.5rem;
+      padding-bottom: 1.2rem;
     }
 
     .p-price {
       font-family: var(--font-sans);
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 600;
       color: var(--text-primary);
     }
 
     .p-price-note {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--accent-gold);
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
 
-    .p-badges {
-      display: flex;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .p-badge {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      padding: 0.4rem 1rem;
-      background-color: var(--bg-white);
-      border: 1px solid var(--border-color);
-      border-radius: 20px;
-      color: var(--text-primary);
-    }
-
-    .p-description {
-      font-size: 1.05rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      margin-bottom: 2.5rem;
-    }
-
     .color-selection {
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem;
       width: 100%;
     }
 
     .color-label {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       font-weight: 600;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.6rem;
       display: block;
     }
 
     .color-swatches {
       display: flex;
-      gap: 1rem;
+      gap: 0.9rem;
     }
 
     .swatch {
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       border: 1px solid rgba(22, 22, 22, 0.25);
       cursor: pointer;
@@ -219,7 +195,7 @@
     .swatch.active {
       border-color: var(--accent-gold);
       border-width: 2px;
-      transform: scale(1.18);
+      transform: scale(1.15);
       box-shadow: 0 0 0 4px rgba(183, 138, 86, 0.25);
     }
 
@@ -228,56 +204,141 @@
       flex-direction: column;
       gap: 1rem;
       width: 100%;
-      margin-bottom: 3rem;
+      margin-bottom: 1.8rem;
     }
 
     .p-actions .btn-magnetic {
       width: 100%;
+      max-width: 360px;
+      padding: 0.85rem 1.6rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
       justify-content: center;
+      white-space: nowrap;
     }
 
-    /* Product Accordion */
-    .product-accordions {
-      width: 100%;
-      border-top: 1px solid var(--border-color);
-    }
-
-    .accordion-item {
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .accordion-header {
-      padding: 1.4rem 0;
+    .p-badges {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      font-family: var(--font-serif);
-      font-size: 1.4rem;
+      gap: 0.8rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .p-badge {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.4rem 0.9rem;
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
       color: var(--text-primary);
     }
 
-    .accordion-icon {
-      font-size: 1.2rem;
+    .p-description {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 2.2rem;
+    }
+
+    /* Product Details Tabs */
+    .product-tabs-container {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.2rem;
+    }
+
+    .tabs-header-nav {
+      display: flex;
+      gap: 1.2rem;
+      border-bottom: 1px solid var(--border-color);
+      overflow-x: auto;
+      white-space: nowrap;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .tabs-header-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 0.75rem 0;
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      color: var(--text-secondary);
+      cursor: pointer;
+      position: relative;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: color 0.3s ease;
+    }
+
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--accent-gold);
+      transform: scaleX(0);
+      transform-origin: left;
       transition: transform 0.3s ease;
     }
 
-    .accordion-item.active .accordion-icon {
-      transform: rotate(45deg);
+    .tab-btn.active {
+      color: var(--text-primary);
+      font-weight: 600;
     }
 
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s var(--ease-out-expo), padding 0.4s ease;
+    .tab-btn.active::after,
+    .tab-btn:hover::after {
+      transform: scaleX(1);
+    }
+
+    .tabs-content-wrapper {
+      padding: 1.4rem 0 0.5rem 0;
+    }
+
+    .tab-pane {
+      display: none;
       font-size: 0.95rem;
       color: var(--text-secondary);
       line-height: 1.7;
+      animation: fadeInTab 0.35s ease forwards;
     }
 
-    .accordion-item.active .accordion-content {
-      max-height: 300px;
-      padding-bottom: 1.5rem;
+    .tab-pane.active {
+      display: block;
+    }
+
+    .tab-pane p {
+      margin-bottom: 0.4rem;
+    }
+
+    @keyframes fadeInTab {
+      from {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Styling Section */
@@ -309,19 +370,60 @@
     }
 
     @media screen and (max-width: 1024px) {
+      .product-detail-section {
+        padding: 4.8rem 1.25rem 3rem 1.25rem;
+      }
+      .styling-section {
+        padding: 3rem 1.25rem;
+      }
+      .related-section {
+        padding: 3rem 1.25rem;
+      }
+      .navbar,
+      .navbar.scrolled {
+        padding: 0.9rem 1.25rem;
+      }
       .product-detail-container {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
+        width: 100%;
+      }
+      .breadcrumb {
+        margin-bottom: 0.8rem;
       }
       .product-gallery {
         position: relative;
         top: 0;
+        width: 100%;
       }
       .main-image-container {
-        height: 480px;
+        height: 360px;
+        width: 100%;
+      }
+      .thumbnail-grid {
+        width: 100%;
+        gap: 0.5rem;
       }
       .styling-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .main-image-container {
+        height: 320px;
+        padding: 0.8rem;
+      }
+      .p-title {
+        font-size: 2rem;
+      }
+      .p-price {
+        font-size: 1.5rem;
+      }
+      .swatch {
+        width: 32px;
+        height: 32px;
       }
     }
   </style>
@@ -330,6 +432,12 @@
 
   <!-- Transparent Navbar -->
   <header class="navbar scrolled" id="navbar">
+    <div class="mobile-toggle" aria-label="Toggle Navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <a href="index.html" class="nav-brand">AURA</a>
     
     <ul class="nav-links" id="nav-menu">
@@ -340,18 +448,13 @@
     </ul>
 
     <div class="nav-actions">
-      <button class="nav-whatsapp-btn whatsapp-trigger" aria-label="Order on WhatsApp">
+      <button class="nav-cart-btn cart-drawer-toggle" aria-label="Shopping Bag">
         <svg viewBox="0 0 24 24">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.99c-.002 5.45-4.437 9.884-9.885 9.884m0-18.413C6.442 3.372 1.6 8.213 1.6 14.22c0 2.05.57 4.04 1.646 5.772L1.5 24.283l4.417-1.159c1.67 1.006 3.597 1.537 5.631 1.538h.005c6.01 0 10.852-4.843 10.854-10.852 0-2.898-1.129-5.623-3.18-7.674C17.175 4.085 14.45 2.96 11.601 2.96z"/>
+          <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
         </svg>
-        <span>WhatsApp</span>
+        <span class="nav-cart-text">BAG</span>
+        <span class="cart-count-badge">0</span>
       </button>
-
-      <div class="mobile-toggle" aria-label="Toggle Navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
     </div>
   </header>
 
@@ -385,6 +488,25 @@
           <span class="p-price-note">Free Shipping Across India</span>
         </div>
 
+        <!-- Color Selection with Dynamic Swatches -->
+        <div class="color-selection">
+          <span class="color-label">Color Option: <strong id="selected-color-name" style="color: var(--text-primary); font-weight: 500;">Warm Gold</strong></span>
+          <div class="color-swatches" id="color-swatches-container">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Primary Action Button (Add to Bag) -->
+        <div class="p-actions">
+          <button class="btn-magnetic btn-primary" id="add-to-bag-btn">
+            <span class="btn-text">ADD TO BAG</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
         <div class="p-badges">
           <span class="p-badge">&check; PAN India Delivery</span>
           <span class="p-badge">&check; Cash on Delivery Available</span>
@@ -395,59 +517,37 @@
           Crafted for grand celebrations, evening galas, and wedding festivities. Features rich hand-finished velvet, polished antique gold hardware, satin inner lining, and a detachable chain strap for effortless versatile styling.
         </p>
 
-        <!-- Color Selection with Dynamic Swatches -->
-        <div class="color-selection">
-          <span class="color-label">Color Option: <strong id="selected-color-name" style="color: var(--text-primary); font-weight: 500;">Warm Gold</strong></span>
-          <div class="color-swatches" id="color-swatches-container">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-
-        <div class="p-actions">
-          <button class="btn-magnetic btn-primary whatsapp-trigger" id="product-whatsapp-btn">
-            <span class="btn-text">Order on WhatsApp</span>
-            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Accordions -->
-        <div class="product-accordions">
-          <div class="accordion-item active">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <span>Dimensions &amp; Fit</span>
-              <span class="accordion-icon">+</span>
-            </div>
-            <div class="accordion-content">
-              Length: 22 cm | Height: 14 cm | Depth: 6 cm<br>
-              Strap Drop: 52 cm (Detachable Gold Chain)<br>
-              Fits: iPhone Pro Max, Lipstick, Compact Mirror, Cards &amp; Keys.
-            </div>
+        <!-- Product Details Tabs -->
+        <div class="product-tabs-container">
+          <div class="tabs-header-nav" role="tablist">
+            <button class="tab-btn active" onclick="switchProductTab(this, 'tab-fit')" role="tab">
+              Dimensions &amp; Fit
+            </button>
+            <button class="tab-btn" onclick="switchProductTab(this, 'tab-craft')" role="tab">
+              Craftsmanship &amp; Materials
+            </button>
+            <button class="tab-btn" onclick="switchProductTab(this, 'tab-shipping')" role="tab">
+              Shipping &amp; Delivery
+            </button>
           </div>
 
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <span>Craftsmanship &amp; Materials</span>
-              <span class="accordion-icon">+</span>
+          <div class="tabs-content-wrapper">
+            <div id="tab-fit" class="tab-pane active" role="tabpanel">
+              <p><strong>Dimensions:</strong> Length: 22 cm | Height: 14 cm | Depth: 6 cm</p>
+              <p><strong>Strap:</strong> 52 cm Detachable Gold Chain</p>
+              <p><strong>Capacity:</strong> Fits iPhone Pro Max, Lipstick, Compact Mirror, Cards &amp; Keys.</p>
             </div>
-            <div class="accordion-content">
-              Outer: Premium High-Density Velvet &amp; Metallic Accents<br>
-              Lining: Smooth Silk Satin Inner Lining<br>
-              Closure: Magnetic Snap Lock with Custom Gold Emblem.
-            </div>
-          </div>
 
-          <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <span>Shipping &amp; Delivery</span>
-              <span class="accordion-icon">+</span>
+            <div id="tab-craft" class="tab-pane" role="tabpanel">
+              <p><strong>Outer:</strong> Premium High-Density Velvet &amp; Metallic Accents</p>
+              <p><strong>Lining:</strong> Smooth Silk Satin Inner Lining</p>
+              <p><strong>Closure:</strong> Magnetic Snap Lock with Custom Gold Emblem.</p>
             </div>
-            <div class="accordion-content">
-              Dispatched within 24 hours from our Meerut studio.<br>
-              Free Standard Shipping (3-5 business days across India).<br>
-              Cash on Delivery (COD) supported with zero hidden charges.
+
+            <div id="tab-shipping" class="tab-pane" role="tabpanel">
+              <p>Dispatched within 24 hours from our Meerut studio.</p>
+              <p>Free Standard Shipping across India (3–5 business days).</p>
+              <p>Cash on Delivery (COD) supported with zero hidden charges.</p>
             </div>
           </div>
         </div>
@@ -1022,13 +1122,15 @@
       if (window.applyOnlineWatermarks) setTimeout(window.applyOnlineWatermarks, 50);
     }
 
-    // Accordion Toggle
-    function toggleAccordion(header) {
-      const item = header.parentElement;
-      const isActive = item.classList.contains('active');
-      document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
-      if (!isActive) {
-        item.classList.add('active');
+    // Tab Switching Function
+    function switchProductTab(button, tabId) {
+      document.querySelectorAll('.tabs-header-nav .tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tabs-content-wrapper .tab-pane').forEach(pane => pane.classList.remove('active'));
+
+      button.classList.add('active');
+      const targetPane = document.getElementById(tabId);
+      if (targetPane) {
+        targetPane.classList.add('active');
       }
     }
 
@@ -1055,15 +1157,15 @@
         document.getElementById('main-product-img').src = activeProductData.defaultImg;
       }
 
-      // Render Swatches
+      // Render Swatches & Select Initial Color Variant
       const swatchesContainer = document.getElementById('color-swatches-container');
       if (swatchesContainer && activeProductData.colors) {
         const colorKeys = Object.keys(activeProductData.colors);
         
-        swatchesContainer.innerHTML = colorKeys.map((k, idx) => {
+        swatchesContainer.innerHTML = colorKeys.map((k) => {
           const c = activeProductData.colors[k];
           return `
-            <div class="swatch ${idx === 0 && !activeProductData.defaultImg ? 'active' : ''}" 
+            <div class="swatch" 
                  style="background-color: ${c.hex};" 
                  title="${c.name}" 
                  data-color-key="${k}" 
@@ -1072,20 +1174,83 @@
         }).join('');
 
         if (colorKeys.length > 0) {
-          const firstColor = activeProductData.colors[colorKeys[0]];
-          const thumbGrid = document.getElementById('thumbnail-grid');
-          if (thumbGrid && firstColor.thumbs) {
-            thumbGrid.innerHTML = firstColor.thumbs.map((tUrl, idx) => `
-              <div class="thumb-item ${idx === 0 ? 'active' : ''}" onclick="switchProductImage(this, '${tUrl}')">
-                <img src="${tUrl}" alt="Thumbnail View ${idx + 1}">
-              </div>
-            `).join('');
-          }
+          selectColorVariant(colorKeys[0]);
         }
+      }
+
+      // Add to Bag Button Handler
+      const addBtn = document.getElementById('add-to-bag-btn');
+      if (addBtn) {
+        addBtn.addEventListener('click', () => {
+          const selectedColorName = document.getElementById('selected-color-name')?.textContent || 'Standard';
+          const mainImg = document.getElementById('main-product-img')?.src || '';
+          
+          window.addToCart({
+            id: productId,
+            title: activeProductData.title,
+            price: activeProductData.price,
+            color: selectedColorName,
+            image: mainImg,
+            quantity: 1
+          });
+        });
       }
 
       if (window.applyOnlineWatermarks) setTimeout(window.applyOnlineWatermarks, 100);
     });
   </script>
+
+  <!-- Cart Drawer Overlay -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Cart Drawer Panel -->
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Bag">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">YOUR SHOPPING BAG</h3>
+      <button class="cart-close-btn" id="cart-drawer-close" aria-label="Close bag">&times;</button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <div class="cart-empty-notice" id="cart-empty-notice">
+        <svg class="cart-empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+        </svg>
+        <p>Your shopping bag is currently empty.</p>
+        <a href="collections.html" class="cart-secondary-link" style="color: var(--accent-gold); font-weight: 600;">Explore Catalogue &rarr;</a>
+      </div>
+
+      <div id="cart-drawer-items">
+        <!-- Dynamically rendered by cart.js -->
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer" id="cart-footer-actions" style="display: none;">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">₹0</span>
+      </div>
+      <div class="cart-shipping-note">Complimentary Express Shipping Across India</div>
+      
+      <button type="button" class="cart-checkout-btn" onclick="window.checkoutCart()">Proceed to Checkout</button>
+      <a href="#" class="whatsapp-trigger cart-secondary-link">Need assistance? Chat on WhatsApp &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Checkout Success Modal -->
+  <div class="checkout-modal-backdrop" id="checkout-modal">
+    <div class="checkout-modal-card">
+      <div class="checkout-success-icon">&check;</div>
+      <h3 class="checkout-modal-title">Order Confirmed</h3>
+      <p class="checkout-modal-subtitle">Thank you for your order with AURA Handbags. Our Meerut studio has received your order details.</p>
+      
+      <div class="checkout-summary-box">
+        <div id="checkout-summary-text"></div>
+      </div>
+
+      <button type="button" class="cart-checkout-btn" onclick="document.getElementById('checkout-modal').classList.remove('active')">Continue Shopping</button>
+    </div>
+  </div>
+
+  <script src="js/cart.js"></script>
 </body>
 </html>

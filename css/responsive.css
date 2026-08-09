@@ -114,16 +114,53 @@
     cursor: auto !important;
   }
 
-  .navbar {
-    padding: 1.2rem 1.5rem;
+  .navbar,
+  .navbar.scrolled {
+    padding: 0.9rem 1.25rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
   }
 
-  .navbar.scrolled {
-    padding: 0.9rem 1.5rem;
+  .nav-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1002;
   }
 
   .mobile-toggle {
     display: flex;
+    order: -1;
+    z-index: 1002;
+  }
+
+  .nav-cart-btn {
+    padding: 0.4rem;
+    background: transparent !important;
+    border: none !important;
+    color: var(--text-primary) !important;
+    gap: 0.2rem;
+    box-shadow: none !important;
+  }
+
+  .nav-cart-btn:hover {
+    background: transparent !important;
+    color: var(--accent-gold) !important;
+  }
+
+  .nav-cart-btn .nav-cart-text {
+    display: none !important;
+  }
+
+  .nav-cart-btn svg {
+    width: 22px;
+    height: 22px;
   }
 
   .nav-links {

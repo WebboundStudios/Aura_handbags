@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ------------------------------------------------------------------------
      3. WhatsApp Order / Inquiry Integration
      ------------------------------------------------------------------------ */
-  const whatsappNumber = '919876543210'; // Brand business WhatsApp line
+  const whatsappNumber = '917217063915'; // Brand business WhatsApp line
   const whatsappButtons = document.querySelectorAll('.whatsapp-trigger');
 
   whatsappButtons.forEach((btn) => {
@@ -78,28 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   /* ------------------------------------------------------------------------
-     5. Automatic Online Stock Image Watermarking ("ONLINE IMAGE")
+     5. Automatic Online Stock Image Watermarking (Disabled)
      ------------------------------------------------------------------------ */
   function applyOnlineWatermarks() {
-    document.querySelectorAll('img').forEach((img) => {
-      const src = img.getAttribute('src') || img.src || '';
-      // Tag any online unsplash/stock image that is NOT a real client ImageKit upload
-      if (src.includes('unsplash.com') || (src.startsWith('http') && !src.includes('ik.imagekit.io'))) {
-        const parent = img.parentElement;
-        if (parent && !parent.querySelector('.online-image-watermark')) {
-          const computedPos = window.getComputedStyle(parent).position;
-          if (computedPos === 'static') {
-            parent.style.position = 'relative';
-          }
-          const badge = document.createElement('div');
-          badge.className = 'online-image-watermark';
-          badge.textContent = 'ONLINE IMAGE';
-          parent.appendChild(badge);
-        }
-      }
-    });
+    // Disabled as requested
   }
 
-  applyOnlineWatermarks();
   window.applyOnlineWatermarks = applyOnlineWatermarks;
 });
